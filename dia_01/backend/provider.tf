@@ -1,4 +1,9 @@
 terraform {
+  backend "s3" {
+    bucket = "descomplicando-terraform-vasco"
+    key    = "aula_backend"
+    region = "us-east-2"
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
